@@ -1,9 +1,9 @@
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
 use near_sdk::{log, near_bindgen};
 
-const DEFAULT_ELECTION_TOPIC: &str = "The 5th President?";
-const DEFAULT_FIRST_CANDIDATE: &str = "Raila Odinga";
-const DEFAULT_SECOND_CANDIDATE: &str = "William Ruto";
+const DEFAULT_ELECTION_TOPIC: &str = "World Super Powers";
+const DEFAULT_FIRST_CANDIDATE: &str = "United States";
+const DEFAULT_SECOND_CANDIDATE: &str = "China";
 
 #[near_bindgen]
 #[derive(BorshDeserialize, BorshSerialize)]
@@ -118,3 +118,57 @@ impl ElectionDetails {
 }
 
 // tests here
+#[cfg(test)]
+mod tests {
+    use super::*;
+    // testing increment votes function
+    #[test]
+    fn test_increment_votes() {
+        let mut candidate = Candidate::default();
+        candidate.increment_votes();
+        assert_eq!(candidate.number_of_votes, 1);
+    }
+
+    // testing declare winner function
+    #[test]
+    fn test_declare_winner() {
+        //    compare first and second candidate votes and declare winner, if tie return tie
+        let mut election_details = ElectionDetails::default();
+        election_details.first_candidate.number_of_votes = 1;
+        election_details.second_candidate.number_of_votes = 1;
+        assert_eq!(election_details.declare_winner(), "Tie");
+        election_details.first_candidate.number_of_votes = 2;
+        election_details.second_candidate.number_of_votes = 1;
+        assert_eq!(election_details.declare_winner(), "United States");
+        election_details.first_candidate.number_of_votes = 1;
+        election_details.second_candidate.number_of_votes = 2;
+        assert_eq!(election_details.declare_winner(), "China");
+    }
+
+    // testing set first candidate function
+    #[test]
+    fn test_set_first_candidate() {
+        let mut election_details = ElectionDetails::default();
+        election_details.set_first_candidate("United States".to_string());
+        assert_eq!(
+            election_details.first_candidate.candidate_name,
+            "United States"
+        );
+    }
+
+    // testing set second candidate function
+    #[test]
+    fn test_set_second_candidate() {
+        let mut election_details = ElectionDetails::default();
+        election_details.set_second_candidate("China".to_string());
+        assert_eq!(election_details.second_candidate.candidate_name, "China");
+    }
+
+    // testing set election topic function
+    #[test]
+    fn test_set_election_topic() {
+        let mut election_details = ElectionDetails::default();
+        election_details.set_election_topic("World Super Powers".to_string());
+        assert_eq!(election_details.election_topic, "World Super Powers");
+    }
+}
