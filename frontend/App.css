@@ -1,0 +1,119 @@
+.vote-component {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  width: 300px;
+  margin: auto;
+  position: relative;
+  margin-top: -20px;
+}
+
+.polls-component {
+  margin: auto;
+
+  width: 500px;
+  position: relative;
+  margin-top: -20px;
+}
+
+.first-candidate {
+  float: left;
+  width: 45%;
+  align-items: center;
+}
+.first-candidate h4 {
+  justify-content: center;
+}
+
+.second-candidate {
+  float: right;
+  width: 45%;
+}
+.sign-in-component {
+  height: 100vh;
+  text-align: center;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  width: 700px;
+  margin: auto;
+  position: relative;
+  /* margin-top: 200px; */
+}
+.btn {
+  background-color: blue;
+  color: white;
+  width: 100%;
+  align-items: center;
+  border-radius: 30px;
+  padding: 8px;
+  margin: 8px;
+}
+
+.polls-form {
+  text-align: left;
+  font-size: large;
+}
+
+.polls-form input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  padding: 8px;
+  /* align-items: center; */
+  border: 2px black;
+}
+
+.submit-button {
+  margin: auto;
+  align-items: center;
+  padding: 8px;
+  margin: 8px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+}
+.red-text {
+  color: red;
+  font-size: 30px;
+}
+
+.sign-in-component button {
+  width: 70%;
+}
+.sign-in-component h2 {
+  text-align: center;
+}
+
+.blue-color {
+  color: blue;
+}
+.ubuntu {
+  font-family: "Ubuntu";
+}
+
+.save-candidate {
+  width: auto;
+}
+
+.polls-component h2,
+h3 {
+  text-align: center;
+}
+
+.btn-winner {
+  width: 50%;
+  background-color: blue;
+  color: white;
+  align-items: center;
+  border-radius: 30px;
+  padding: 8px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
