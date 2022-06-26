@@ -1,9 +1,6 @@
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
 use near_sdk::{log, near_bindgen};
 
-// const DEFAULT_CANDIDATE_NAME: &str = "Frank Morara";
-// const DEFAULT_NUMBER_OF_VOTES: u32 = 1;
-
 const DEFAULT_ELECTION_TOPIC: &str = "The 5th President?";
 const DEFAULT_FIRST_CANDIDATE: &str = "Raila Odinga";
 const DEFAULT_SECOND_CANDIDATE: &str = "William Ruto";
@@ -28,9 +25,9 @@ impl Default for Candidate {
 
 #[near_bindgen]
 impl Candidate {
-    pub fn increment_votes(&mut self, number_of_votes: u32) {
+    pub fn increment_votes(&mut self) {
         log!("Increased votes to: {}", self.number_of_votes);
-        self.number_of_votes += number_of_votes;
+        self.number_of_votes += 1;
     }
 
     pub fn get_votes(&self) -> u32 {
@@ -40,7 +37,6 @@ impl Candidate {
 
 #[near_bindgen]
 #[derive(BorshDeserialize, BorshSerialize)]
-// #[serde(crate = "near_sdk::serde")]
 pub struct ElectionDetails {
     election_topic: String,
     first_candidate: Candidate,
@@ -120,3 +116,5 @@ impl ElectionDetails {
 
     // get election details default function...
 }
+
+// tests here

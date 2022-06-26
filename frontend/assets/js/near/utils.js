@@ -15,8 +15,7 @@ export async function initContract() {
     )
   );
 
-  // Initializing Wallet based Account. It can work with NEAR testnet wallet that
-  // is hosted at https://wallet.testnet.near.org
+  // Initializing Wallet based Account.
   window.walletConnection = new WalletConnection(near);
 
   // Getting the Account ID. If still unauthorized, it's just empty string
@@ -27,7 +26,6 @@ export async function initContract() {
     window.walletConnection.account(),
     nearConfig.contractName,
     {
-      // View methods are read only. They don't modify the state, but usually return some value.
       viewMethods: [
         "get_election_topic",
 
@@ -37,7 +35,6 @@ export async function initContract() {
         "getNearBalance",
         "get_votes",
       ],
-      // Change methods can modify the state. But you don't receive the returned value when called.
       changeMethods: [
         "set_election_topic",
         "set_first_candidate",

@@ -27023,10 +27023,7 @@ var _config = require("./assets/js/near/config");
 var _configDefault = parcelHelpers.interopDefault(_config);
 var _pollsComponent = require("./Components/PollsComponent");
 var _pollsComponentDefault = parcelHelpers.interopDefault(_pollsComponent);
-var _s = $RefreshSig$();
 function App() {
-    _s();
-    const [showNotification, setShowNotification] = (0, _reactDefault.default).useState(false);
     if (!window.walletConnection.isSignedIn()) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -27039,153 +27036,83 @@ function App() {
                         }
                     }, void 0, false, {
                         fileName: "frontend/App.js",
-                        lineNumber: 25,
+                        lineNumber: 15,
                         columnNumber: 11
                     }, this),
-                    "Welcome to niapol!"
+                    "Welcome to niapol"
                 ]
             }, void 0, true, {
+                fileName: "frontend/App.js",
+                lineNumber: 14,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "niapol is a web app built with React for frontend and Rust smart contracts that conducts polls and voting between two candidates on the NEAR Blockchain Network."
+            }, void 0, false, {
                 fileName: "frontend/App.js",
                 lineNumber: 24,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "niapol is a web app built with React for frontend and Rust smart contracts that conducts polls and voting between two candidates"
+                children: "This web app currently runs in the testnet environment. To use it, you need to sign in with your NEAR account."
+            }, void 0, false, {
+                fileName: "frontend/App.js",
+                lineNumber: 29,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "To vote, sign in below"
+            }, void 0, false, {
+                fileName: "frontend/App.js",
+                lineNumber: 33,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "btn",
+                onClick: (0, _utils.login),
+                children: "Sign in"
             }, void 0, false, {
                 fileName: "frontend/App.js",
                 lineNumber: 34,
                 columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: 'Do not worry, this app runs in the test network ("testnet"). It works just like the main network ("mainnet"), but using NEAR Tokens that are only for testing!'
-            }, void 0, false, {
-                fileName: "frontend/App.js",
-                lineNumber: 38,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                style: {
-                    textAlign: "center",
-                    marginTop: "2.5em"
-                },
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    onClick: (0, _utils.login),
-                    children: "Sign in"
-                }, void 0, false, {
-                    fileName: "frontend/App.js",
-                    lineNumber: 44,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "frontend/App.js",
-                lineNumber: 43,
-                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "frontend/App.js",
-        lineNumber: 23,
+        lineNumber: 13,
         columnNumber: 7
     }, this);
     return(// use React Fragment, <>, to avoid wrapping elements in unnecessary divs
     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: [
-                            "Voter: ",
-                            window.accountId
-                        ]
-                    }, void 0, true, {
-                        fileName: "frontend/App.js",
-                        lineNumber: 54,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pollsComponentDefault.default), {}, void 0, false, {
-                        fileName: "frontend/App.js",
-                        lineNumber: 55,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "frontend/App.js",
-                lineNumber: 53,
-                columnNumber: 7
-            }, this),
-            showNotification && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Notification, {}, void 0, false, {
-                fileName: "frontend/App.js",
-                lineNumber: 57,
-                columnNumber: 28
-            }, this)
-        ]
-    }, void 0, true));
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: [
+                        "Voter: ",
+                        window.accountId
+                    ]
+                }, void 0, true, {
+                    fileName: "frontend/App.js",
+                    lineNumber: 45,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pollsComponentDefault.default), {}, void 0, false, {
+                    fileName: "frontend/App.js",
+                    lineNumber: 46,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "frontend/App.js",
+            lineNumber: 44,
+            columnNumber: 7
+        }, this)
+    }, void 0, false));
 }
 exports.default = App;
-_s(App, "Gh3qACoyPMsFMEhcDXGTci56On8=");
 _c = App;
-// this component gets rendered by App after the form is submitted
-function Notification() {
-    const { networkId  } = (0, _configDefault.default)("development");
-    const urlPrefix = `https://explorer.${networkId}.near.org/accounts`;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("aside", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                target: "_blank",
-                rel: "noreferrer",
-                href: `${urlPrefix}/${window.accountId}`,
-                children: window.accountId
-            }, void 0, false, {
-                fileName: "frontend/App.js",
-                lineNumber: 69,
-                columnNumber: 7
-            }, this),
-            " " /* React trims whitespace around tags; insert literal space character when needed */ ,
-            "called method: 'set_greeting' in contract:",
-            " ",
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                target: "_blank",
-                rel: "noreferrer",
-                href: `${urlPrefix}/${window.contract.contractId}`,
-                children: window.contract.contractId
-            }, void 0, false, {
-                fileName: "frontend/App.js",
-                lineNumber: 80,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: "\u2714 Succeeded"
-                    }, void 0, false, {
-                        fileName: "frontend/App.js",
-                        lineNumber: 88,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: "Just now"
-                    }, void 0, false, {
-                        fileName: "frontend/App.js",
-                        lineNumber: 89,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "frontend/App.js",
-                lineNumber: 87,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "frontend/App.js",
-        lineNumber: 68,
-        columnNumber: 5
-    }, this);
-}
-_c1 = Notification;
-var _c, _c1;
+var _c;
 $RefreshReg$(_c, "App");
-$RefreshReg$(_c1, "Notification");
 
   $parcel$ReactRefreshHelpers$a6b1.postlude(module);
 } finally {
@@ -27824,14 +27751,12 @@ async function initContract() {
             keyStore: new (0, _nearApiJs.keyStores).BrowserLocalStorageKeyStore()
         }
     }, nearConfig));
-    // Initializing Wallet based Account. It can work with NEAR testnet wallet that
-    // is hosted at https://wallet.testnet.near.org
+    // Initializing Wallet based Account.
     window.walletConnection = new (0, _nearApiJs.WalletConnection)(near);
     // Getting the Account ID. If still unauthorized, it's just empty string
     window.accountId = window.walletConnection.getAccountId();
     // Initializing our contract APIs by contract name and configuration
     window.contract = await new (0, _nearApiJs.Contract)(window.walletConnection.account(), nearConfig.contractName, {
-        // View methods are read only. They don't modify the state, but usually return some value.
         viewMethods: [
             "get_election_topic",
             "get_first_candidate",
@@ -27840,7 +27765,6 @@ async function initContract() {
             "getNearBalance",
             "get_votes", 
         ],
-        // Change methods can modify the state. But you don't receive the returned value when called.
         changeMethods: [
             "set_election_topic",
             "set_first_candidate",
@@ -30694,8 +30618,8 @@ Object.defineProperty(exports, "BinaryReader", {
 
 },{"borsh":"e0LBZ"}],"e0LBZ":[function(require,module,exports) {
 "use strict";
-var Buffer = require("buffer").Buffer;
 var global = arguments[3];
+var Buffer = require("buffer").Buffer;
 var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, {
@@ -44027,7 +43951,7 @@ module.exports = function() {
 };
 
 },{"u3":"dIyaj","./prepareStackTrace":"85RZD"}],"bZD2N":[function(require,module,exports) {
-const CONTRACT_NAME = "dev-1656232792110-24461219539848";
+const CONTRACT_NAME = "dev-1656241560941-39442188796356";
 function getConfig(env) {
     switch(env){
         case "production":
@@ -44159,7 +44083,6 @@ const PollsComponent = ()=>{
         else if (first_votes < second_votes) setWinner(second_candidate);
         else setWinner("Tie");
     };
-    const [buttonDisabled, setButtonDisabled] = (0, _reactDefault.default).useState(true);
     // useEffect to get election topic
     (0, _reactDefault.default).useEffect(()=>{
         (0, _utils.get_election_topic)().then((topic)=>{
@@ -44206,7 +44129,7 @@ const PollsComponent = ()=>{
                 className: "polls-container"
             }, void 0, false, {
                 fileName: "frontend/Components/PollsComponent.jsx",
-                lineNumber: 99,
+                lineNumber: 97,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -44219,14 +44142,14 @@ const PollsComponent = ()=>{
                                 className: "vote-title"
                             }, void 0, false, {
                                 fileName: "frontend/Components/PollsComponent.jsx",
-                                lineNumber: 102,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: election_topic
                             }, void 0, false, {
                                 fileName: "frontend/Components/PollsComponent.jsx",
-                                lineNumber: 104,
+                                lineNumber: 102,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -44239,7 +44162,7 @@ const PollsComponent = ()=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "frontend/Components/PollsComponent.jsx",
-                                        lineNumber: 106,
+                                        lineNumber: 104,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -44248,7 +44171,7 @@ const PollsComponent = ()=>{
                                         children: "Vote"
                                     }, void 0, false, {
                                         fileName: "frontend/Components/PollsComponent.jsx",
-                                        lineNumber: 107,
+                                        lineNumber: 105,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
@@ -44258,13 +44181,13 @@ const PollsComponent = ()=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "frontend/Components/PollsComponent.jsx",
-                                        lineNumber: 110,
+                                        lineNumber: 108,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "frontend/Components/PollsComponent.jsx",
-                                lineNumber: 105,
+                                lineNumber: 103,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -44274,7 +44197,7 @@ const PollsComponent = ()=>{
                                         children: second_candidate
                                     }, void 0, false, {
                                         fileName: "frontend/Components/PollsComponent.jsx",
-                                        lineNumber: 114,
+                                        lineNumber: 112,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -44283,7 +44206,7 @@ const PollsComponent = ()=>{
                                         children: "Vote"
                                     }, void 0, false, {
                                         fileName: "frontend/Components/PollsComponent.jsx",
-                                        lineNumber: 115,
+                                        lineNumber: 113,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
@@ -44293,29 +44216,31 @@ const PollsComponent = ()=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "frontend/Components/PollsComponent.jsx",
-                                        lineNumber: 118,
+                                        lineNumber: 116,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "frontend/Components/PollsComponent.jsx",
-                                lineNumber: 113,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
                                 children: [
                                     "Winner:",
-                                    " "
+                                    " ",
+                                    //set winner to expression comparing first votes to second votes
+                                    first_votes > second_votes ? first_candidate + " wins!" : second_candidate + " wins!"
                                 ]
                             }, void 0, true, {
                                 fileName: "frontend/Components/PollsComponent.jsx",
-                                lineNumber: 121,
+                                lineNumber: 119,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "frontend/Components/PollsComponent.jsx",
-                        lineNumber: 101,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -44324,23 +44249,23 @@ const PollsComponent = ()=>{
                         children: "Sign Out"
                     }, void 0, false, {
                         fileName: "frontend/Components/PollsComponent.jsx",
-                        lineNumber: 132,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "frontend/Components/PollsComponent.jsx",
-                lineNumber: 100,
+                lineNumber: 98,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "frontend/Components/PollsComponent.jsx",
-        lineNumber: 98,
+        lineNumber: 96,
         columnNumber: 5
     }, undefined);
 };
-_s(PollsComponent, "Bd9gfVu+Bl0GpNpV77+iWqISxcc=");
+_s(PollsComponent, "WhF2IODU2tCBhyArpHa1qQfHKuQ=");
 _c = PollsComponent;
 exports.default = PollsComponent;
 var _c;
