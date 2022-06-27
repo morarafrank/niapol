@@ -7,7 +7,6 @@ const DEFAULT_SECOND_CANDIDATE: &str = "China";
 
 #[near_bindgen]
 #[derive(BorshDeserialize, BorshSerialize)]
-// #[serde(crate = "near_sdk::serde")]
 pub struct Candidate {
     candidate_name: String,
     number_of_votes: u32,

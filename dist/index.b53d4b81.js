@@ -27082,8 +27082,7 @@ function App() {
         lineNumber: 13,
         columnNumber: 7
     }, this);
-    return(// use React Fragment, <>, to avoid wrapping elements in unnecessary divs
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -27093,21 +27092,21 @@ function App() {
                     ]
                 }, void 0, true, {
                     fileName: "frontend/App.js",
-                    lineNumber: 45,
+                    lineNumber: 44,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pollsComponentDefault.default), {}, void 0, false, {
                     fileName: "frontend/App.js",
-                    lineNumber: 46,
+                    lineNumber: 45,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "frontend/App.js",
-            lineNumber: 44,
+            lineNumber: 43,
             columnNumber: 7
         }, this)
-    }, void 0, false));
+    }, void 0, false);
 }
 exports.default = App;
 _c = App;

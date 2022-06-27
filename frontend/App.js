@@ -39,7 +39,6 @@ export default function App() {
   }
 
   return (
-    // use React Fragment, <>, to avoid wrapping elements in unnecessary divs
     <>
       <main>
         <h1>Voter: {window.accountId}</h1>

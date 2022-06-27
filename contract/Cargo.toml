@@ -1,7 +1,7 @@
 [package]
 name = "niapol"
 version = "1.0.0"
-authors = ["Near Inc <hello@near.org>"]
+authors = ["morarafrank11@gmail.com"]
 edition = "2021"
 
 [lib]
