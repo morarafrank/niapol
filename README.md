@@ -17,7 +17,14 @@ Exploring The Code
 ==================
 
 1. The "backend" code lives in the `/contract` folder. 
+      The contracts has methods that set election details set_election_topic, set_first_candidate, set_second_candidate.
+      It also has increment_votes contract that adds the number of votes by one.
+      The contract has also other methods like declare_winner to decide the winner depending on the number of votes of candidates,
+      set_winner that returns winning candidate name and get_votes to get the number of votes of candidates.
 2. The frontend code lives in the `/frontend` folder. `/frontend/App.js` 
+      The frontend App.js is the entry point to the web app where the voter is asked to first login in order to be able to vote. 
+      After successful sign in, the PollsComponent is launched and voting takes place.
+      The fronted has one component PollsComponent where the voting takes place.
 3. Tests: Tests are found in the `/contract/lib.rs` file.
 
 Deploy
